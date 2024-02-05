@@ -3,15 +3,6 @@ pipeline {
 
     stages {
         
-	stage('Setup') {
-	    steps {
-		script {
-		    def mvnHome = tool 'Maven'
-		    env.PATH = "${mvnHome}/bin:${env.PATH}"
-		}
-		}
-	}	
-
 	stage('Step 1') {
             steps {
                 cleanWs()
