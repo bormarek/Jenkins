@@ -17,5 +17,12 @@ pipeline {
 		        sh 'ls -ltr'
             }
         }
+	
+	stage('Step 3') {
+	    steps {
+		echo 'Executing Step 3'
+			sh 'tree /Users/marek/.jenkins/workspace'
+		}
+	}
     }
 }
