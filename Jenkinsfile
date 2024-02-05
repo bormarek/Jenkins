@@ -29,12 +29,12 @@ pipeline {
 		        sh 'ls -ltr'
 	        }
         }
-
+    }
 	post {
            always {
             // Zawsze wykonaj krok czyszczenia workspace'a
             cleanWs()
            }
-       }
     }
+    
 }
