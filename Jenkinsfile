@@ -5,6 +5,7 @@ pipeline {
 
         stage('Setup') {
             steps {
+		echo "setup"
                 // Dodaj ścieżkę do narzędzia tree do zmiennej PATH
                 script {
                     def treePath = "/opt/homebrew/bin/tree"  // Podaj pełną ścieżkę do narzędzia tree
