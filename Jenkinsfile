@@ -36,5 +36,6 @@ pipeline {
             // Zawsze wykonaj krok czyszczenia workspace'a
             cleanWs()
         }
+	}
     }
 }
