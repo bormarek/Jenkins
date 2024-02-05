@@ -2,25 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Step 1') {
             steps {
-                // Pobierz kod źródłowy z systemu kontroli wersji (np. Git)
-                git 'https://github.com/bormarek/Jenkins.git'
+                echo 'Executing Step 1'
             }
         }
 
-        stage('Display Message') {
+        stage('Step 2') {
             steps {
-                // Wyświetl prosty komunikat
-                echo 'Hello, Jenkins! This is a simple pipeline.'
+                echo 'Executing Step 2'
             }
         }
-	stage('Test') {
+
+        stage('Step 3') {
             steps {
-                // Wykonaj kroki związane z budową aplikacji (np. Maven)
-		echo "Test"
+                echo 'Executing Step 3'
             }
         }
     }
 }
-
