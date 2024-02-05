@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Step 1') {
             steps {
+                cleanWs()
                 echo 'Executing Step 1'
 		        sh 'git clone https://github.com/bormarek/java_example.git'
             }
@@ -18,7 +19,6 @@ pipeline {
 
         stage('Step 3') {
             steps {
-                cleanWs()
                 echo 'Executing Step 3'
                 sh 'cd java_example && mvn clean package'
             }
@@ -30,11 +30,4 @@ pipeline {
 	        }
         }
     }
-	post {
-           always {
-            // Zawsze wykonaj krok czyszczenia workspace'a
-            cleanWs()
-           }
-    }
-    
 }
