@@ -19,7 +19,14 @@ pipeline {
         stage('Step 3') {
             steps {
                 echo 'Executing Step 3'
+		sh 'cd java_example && mvn clean package'
             }
+        }
+	
+	stage('Step 4') {
+	    steps {
+		sh 'ls -ltr'
+	    }
         }
     }
 }
