@@ -5,7 +5,7 @@ pipeline {
         stage('Step 1') {
             steps {
                 echo 'Executing Step 1'
-		git 'https://github.com/bormarek/java_example.git'
+		sh 'git clone https://github.com/bormarek/java_example.git'
             }
         }
 
