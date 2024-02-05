@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pobierz kod źródłowy z systemu kontroli wersji (np. Git)
-                git 'https://github.com/twoja-repozytorium.git'
+                git 'https://github.com/bormarek/Jenkins.git'
             }
         }
 
