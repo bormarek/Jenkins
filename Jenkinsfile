@@ -15,10 +15,10 @@ pipeline {
                 echo 'Hello, Jenkins! This is a simple pipeline.'
             }
         }
-	stage('Build') {
+	stage('Test') {
             steps {
                 // Wykonaj kroki związane z budową aplikacji (np. Maven)
-                sh 'mvn clean package'
+		echo "Test"
             }
         }
     }
