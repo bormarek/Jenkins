@@ -3,13 +3,12 @@ pipeline {
 
     stages {
 
-        stage('Setup') {
+        
+        stage('Display Tree') {
             steps {
-		echo "setup"
-                // Dodaj ścieżkę do narzędzia tree do zmiennej PATH
                 script {
-                    def treePath = "/opt/homebrew/bin/tree"  // Podaj pełną ścieżkę do narzędzia tree
-                    env.PATH = "${treePath}:${env.PATH}"
+                    def treeCommand = isUnix() ? 'tree .' : 'cmd /c tree .'
+                    bat(script: treeCommand, returnStatus: true)
                 }
             }
         }
