@@ -18,6 +18,8 @@ pipeline {
 
         stage('Step 3') {
             steps {
+		cleanWs()
+		
                 echo 'Executing Step 3'
 		sh 'cd java_example && mvn clean package'
             }
@@ -28,5 +30,10 @@ pipeline {
 		sh 'ls -ltr'
 	    }
         }
+	post {
+	    always {
+		cleanWs()
+	    }
+	}
     }
 }
