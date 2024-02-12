@@ -17,13 +17,6 @@ pipeline {
                     sh 'mvn clean package'
                 }
             }
-        
-        stage('Step 3') {
-            steps {
-            echo 'Executing Step 3'
-                sh 'ls -ltr /Users/marek/.jenkins/workspace/maven_test'
-            }
-        }
     }
     post {
         success {
