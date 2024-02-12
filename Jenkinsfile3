@@ -16,7 +16,7 @@ pipeline {
                 script{
                     echo "This is deploy step ..."
                     def branchName = "${env.BRANCH_NAME}"
-                    if(branchName == "master"){
+                    if(branchName == "main"){
                         println("Deploy to prod")
                     }
                     else if(branchName == "test"){
