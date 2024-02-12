@@ -25,4 +25,16 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            // Jeśli budowa zakończyła się sukcesem, wykonaj odpowiednie akcje
+            echo 'Budowa zakończona sukcesem! Aplikacja została zbudowana poprawnie.'
+            // Tutaj można dodać dodatkowe kroki, np. wdrożenie aplikacji
+        }
+        failure {
+            // Jeśli budowa zakończyła się niepowodzeniem, wykonaj odpowiednie akcje
+            echo 'Budowa zakończona niepowodzeniem! Sprawdź logi i popraw błędy.'
+            // Tutaj można dodać dodatkowe kroki, np. powiadomienie o niepowodzeniu
+        }
+    }
 }
