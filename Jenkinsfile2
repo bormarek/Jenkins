@@ -6,17 +6,16 @@ pipeline {
         maven "mvn"
     }
 
-    stages {
-        stage('Build') {
+    stages{
+        stage('SCM Checkout'){
             steps {
-                // Get some code from a GitHub repository
                 git 'https://github.com/bormarek/java_example.git'
-
-                // Run Maven on a Unix agent.
-                sh "mvn  clean package"
-
             }
-
+        }
+        stage('BUILD'){
+            steps {
+                sh 'mvn clean test'
+            }
         }
     }
 }
