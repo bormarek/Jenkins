@@ -14,7 +14,7 @@ pipeline {
             stage('Step 2') {
                 steps {
                     echo 'Executing Step 2'
-                    sh 'ls -ltr'
+                    sh 'mvn compile && mvn package'
                 }
             }
         
