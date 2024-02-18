@@ -30,11 +30,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            // Wykonaj czynności po zakończeniu pipelinii
-            // Na przykład wyczyszczenie środowiska lub inne akcje
-        }
-    }
 }
